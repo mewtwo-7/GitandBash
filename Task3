@@ -1,0 +1,82 @@
+
+                                                        Commit-one-file:
+                            git add A.txt and then git commit. This puts A.txt on the staging area and then commits it.
+
+
+
+
+                                                        Commit-one-staged-file:
+                            git reset HEAD — A.txt. This removes A.txt from the staging area and the git commit commits this.
+
+
+
+
+                                                        Ignore them:
+                            Touch .gitignore creates a hidden file named .gitignore. Using vim editor I changed its content to
+                                            *.exe
+                                            *.o
+                                            *.jar
+                                            libraries/
+
+                            After this I ran git config --global core.excludesFile ~/.gitignore
+                            To configure the file.
+
+
+
+
+
+
+                                                        Chase branch:
+                            git merge escaped works.
+
+
+
+                                                        Merge conflict:
+                            First merge by git merge another-piece-of-work .
+                            code . To open vs code and then edit the file so it’s just 2+3=5. (You can use vim too).
+
+                            git add equation.txt ( or git add .) git commit.
+
+
+
+
+                                                        Save your work:
+                            git stash
+                            Then changing the txt file thorough vs code. Git stash pop. Adding “Finally, finished it!” And committing worked.
+
+
+
+
+                                                        Change-branch-history:
+                            git rebase hot-bugfix worked
+
+
+
+
+                                                        Remove ignored:
+                            git rm ignored.txt worked
+
+
+
+
+                                                        Case sensitive filename:
+                            git mv File.txt file.txt changes the name of file. Then add . And commit works.
+
+
+
+
+                                                        Fix typo:
+                            code .
+                            Fix the bug and then git add .
+                            Then git commit -m “Add Hello world” —amend
+                            This worked.
+
+                            Forge date:
+                            git commit —amend —no-edit —date “01/01/1987” worked.
+
+                                                    Fix old typo:
+                            Git rebase -I HEAD~3
+                            Remove the extra commit
+                            code . => edit the file.
+                            git add .
+                            git rebase —continue and then commit these changes.
